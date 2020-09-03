@@ -1,0 +1,38 @@
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.wrap {
+  .head {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 60px;
+    height: 60px;
+    @include flex-row;
+    justify-content: space-between;
+
+    .txt {
+      border: 1px solid yellow;
+      width: 50%;
+      text-align: center;
+      background: white;
+    }
+
+    .active {
+      color: white;
+      background: green;
+    }
+  }
+
+  .content {
+    margin-top: 60px;
+
+  }
+}
